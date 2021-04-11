@@ -17,6 +17,7 @@ const songname = prompt('Enter songName ');
     await tab.goto("https://www.youtube.com");
 
     await tab.waitForSelector(`input[id="search"]`);
+    await tab.waitForTimeout(1000);
     await tab.type(`input[id="search"]`,songname);
     await tab.click(`button[id="search-icon-legacy"]`);
     await tab.waitForSelector(`a[id="video-title"]`);
@@ -38,6 +39,8 @@ const songname = prompt('Enter songName ');
     await newTab.waitForSelector(`div[id="buttons"] a`);
     await newTab.waitForTimeout(3000);
     await newTab.click(`div[id="buttons"] a`);
+    await newTab.waitForTimeout(15000);
+    await browser.close();
     // let download_link = await newTab.$(`div[id="buttons"] a`);
     // console.log(download_link);
 
