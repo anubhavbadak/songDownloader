@@ -1,6 +1,7 @@
 var http = require("http");
 const fs = require("fs");
 let url = require("url");
+//this is a server i was trying to make for my project but it isnt working 
 
 
 http.createServer(function(req,res){
